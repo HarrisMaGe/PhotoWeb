@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace User.Entity
 {
-    class UserDBService
+    public  class UserDBService
     {
         public List<User> getAllUsers()
         {
@@ -46,7 +46,7 @@ namespace User.Entity
         }
 
         //注册
-        public void login(String name, String passWord, String email)
+        public void signUP(String name, String passWord, String email)
         {
             using (var db = new UserDB())
             {
@@ -59,7 +59,7 @@ namespace User.Entity
        }
 
         //登陆
-        public bool stepin(String name, String passWord)
+        public bool login(String name, String passWord)
         {
             using (var db = new UserDB())
             {

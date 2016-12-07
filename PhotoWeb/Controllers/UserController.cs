@@ -29,7 +29,7 @@ namespace PhotoWeb.Controllers
                 return;
             }
             //成功注册账户
-            myUserDBService.login(name, passWord, email);
+            myUserDBService.signUP(name, passWord, email);
         }
 
     }
