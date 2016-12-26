@@ -61,3 +61,9 @@ D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\zh-Hans\System.Web.Http.WebHost.re
 D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\obj\Debug\PhotoWeb.csprojResolveAssemblyReference.cache
 D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\obj\Debug\PhotoWeb.dll
 D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\obj\Debug\PhotoWeb.pdb
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\User.Entity.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\EntityFramework.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\User.Entity.pdb
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\EntityFramework.xml
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\EntityFramework.SqlServer.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\PhotoWeb\bin\EntityFramework.SqlServer.xml

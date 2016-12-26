@@ -1,0 +1,10 @@
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\User.Entity.dll.config
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\User.Entity.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\User.Entity.pdb
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\EntityFramework.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\EntityFramework.xml
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\obj\Debug\User.Entity.csprojResolveAssemblyReference.cache
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\obj\Debug\User.Entity.dll
+D:\C_Workplace\WebPhoto\PhotoWeb\User.Entity\obj\Debug\User.Entity.pdb

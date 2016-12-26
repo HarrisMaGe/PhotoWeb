@@ -1,0 +1,35 @@
+ //获取图片本地名称，从数据库中对比，看是否重名
+                    string subAddress="";
+                    Random fileN;
+                    string filename="";
+                    string extension = "jpg";
+                    do
+                    {
+                        subAddress = user;
+                        fileN = new Random(DateTime.Now.Hour + DateTime.Now.Millisecond);
+                        filename = fileN.Next(99999).ToString();
+                    }
+                    while (myPhotoService.isExited(subAddress + "/" + filename + "." + extension));//如果重名了就重复随机名称           
+                    
+                    
+                    //保存至本地                
+                    string destFile = "D:/C_Workplace/WebPhoto/PhotoWeb/PhotoWeb/PhotoS/Data/" + subAddress +"/"+ filename + "." + extension;
+                    DirectoryInfo dir = new DirectoryInfo("D:/C_Workplace/WebPhoto/PhotoWeb/PhotoWeb/PhotoS/Data/" + subAddress);
+                    //不存在创建文件夹
+                    if (!dir.Exists)
+                    {
+                        dir.Create();
+                    }
+                    File.Move(file.LocalFileName, destFile);
+
+
+                    //录入数据库      
+                   // photo.Add(user, subAddress + "/" + filename + "." + extension); //key为用户名，value为相对地址
+                }
+
+              //  myPhotoService.insert(photo);
+                foreach (var key in provider.FormData.AllKeys)
+                {
+                    //接收FormData
+                    dic.Add(key, provider.FormData[key]);
+                }

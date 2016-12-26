@@ -11,16 +11,24 @@ namespace User.Entity
 {
     public class UserDB : DbContext//建立上下文环境
     {
-        public UserDB() : base("UserDB") { }
+        public UserDB() : base("UserPhotoDB") { }
         public DbSet<User> users { get; set; }//user表
+        public DbSet<Photo> photos { get; set; }//photo表
     }
 
     public class User
     {
+        [Key]
         public String name { get; set; }//用户名
+        public int photoN { get; set; }//照片数量
         public String passWord { get; set; }//密码
         public String email { get; set; }//用户邮箱
-        [Key]//id为主键     
-        public String id { get; set; }//唯一标识用作识别
+    }
+
+    public class Photo
+    {
+        [Key]
+        public string src { get; set; } //地址，地址为相对路径，从appStart开始
+        public string user { get; set; }//用户名      
     }
 }
