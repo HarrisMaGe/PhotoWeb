@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>登录</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<!--web-font-->
+<link href='http://fonts.useso.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<!--//web-font-->
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Excursion Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="https://ajax.useso.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+
+
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<div id="formbackground" style="position:absolute; z-index:-1;"><img src="images/bg.jpg" height="100%" width="100%"/></div>
+    <script type="text/javascript">
+    $(function(){
+    $('#formbackground').height($(window).height());
+    $('#formbackground').width($(window).width());
+    });
+    </script>
+	<!--navigation-->
+	<div class="top-nav">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="share.html">图片分享</a></li>
+						<li><a href="login.html" class="active">我的分享</a></li>
+					</ul>	
+					<div class="social-icons">
+						<ul>
+							<li><a href="#"></a></li>
+							<li><a href="https://www.facebook.com/" class="fb"></a></li>
+						</ul>	
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>	
+		</nav>		
+	</div>	
+
+	<div class="header">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png"  style= "width:50%;height:50%;" alt=""></a>
+			</div>	
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="搜索……">
+				</div>
+				<button type="submit" class="btn btn-default" aria-label="Left Align">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</button>
+			</form>	
+		</div>	
+	</div>
+
+<div class = "container">
+	<div  class = "main_box" >
+		
+      <div class = "login_box" ng-app="app" ng-controller="siteCtrl">
+      	<div class= "login_form_1">
+      		<form role = "form" class = "login_form "  method="post">
+               <div class = "form-group" >
+                 <label for="name" class = "t" >用户名：</lable>
+                 <input type = "text" class = "form-control x219 in" id = "name" placeholder = "用户名/电话/邮箱" ng-model="user">
+               </div>
+                <div class = "form-group">
+                 <label for="password" class = "t" >密码：</lable>
+                 <input type = "password" class = "form-control x219 in" id = "password" placeholder = "请输入密码……" ng-model="passWord">
+               </div>
+              
+               
+               <button type="submit" class="submit_1 submit_button"   id = "submit_btn" ng-click="login()">登录</button>
+               <div class = "form-group" >
+               
+               	<a  href = "signin.html" class ="signin" style = "margin-left:235px;">立即注册</a>
+               </div>
+
+            </form>
+        </div>
+      </div>
+
+        <script>
+            var app = angular.module('app', []);
+            app.controller('siteCtrl', function ($scope, $http) {
+                //get all Users
+                $scope.login = function () {
+                    $http({
+                        method: 'post',
+                        url: "http://localhost:51060/api/User/login",
+                        data: { name: $scope.user, passWord: $scope.passWord }
+                    })
+                   .success(function (data) { console.log(data); })
+                   .error(function (data) { console.log("失败"); });
+                };
+
+            });
+
+        </script>
+	</div>
+</div>
+</body>
+</html>
