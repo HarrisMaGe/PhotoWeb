@@ -125,7 +125,7 @@
                         url: "http://localhost:51060/api/User/login",
                         data: { name: $scope.user, passWord: $scope.passWord }
                     })
-                   .success(function (data) { console.log(data); })
+                   .success(function (data) { window.location.href = "myshare.html"; })
                    .error(function (data) { console.log("失败"); });
                 };
 

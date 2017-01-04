@@ -107,10 +107,10 @@ namespace PhotoWeb.Controllers
                     }
                     while (myPhotoService.isExited(subAddress + "/" + filename + "." + extension));//如果重名了就重复随机名称           
                     
-                    
+                    String AppPath= System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
                     //保存至本地                
-                    string destFile = "D:/C_Workplace/WebPhoto/PhotoWeb/PhotoWeb/PhotoS/Data/" + subAddress +"/"+ filename + "." + extension;
-                    DirectoryInfo dir = new DirectoryInfo("D:/C_Workplace/WebPhoto/PhotoWeb/PhotoWeb/PhotoS/Data/" + subAddress);
+                    string destFile = AppPath+"/PhotoS/Data/" + subAddress +"/"+ filename + "." + extension;
+                    DirectoryInfo dir = new DirectoryInfo(AppPath+"/PhotoS/Data/" + subAddress);
                     //不存在创建文件夹
                     if (!dir.Exists)
                     {

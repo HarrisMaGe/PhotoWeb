@@ -1,7 +1,7 @@
 //var images;
 
 //保存实时的
-var images；
+var images;
 
 /*=["images/img3.jpg",
 "images/img4.jpg",
