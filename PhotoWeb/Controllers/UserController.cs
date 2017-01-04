@@ -20,9 +20,13 @@ namespace PhotoWeb.Controllers
 
         //注册账户
         [Route("api/User/signup")]
-        [HttpGet]
+        [HttpPost]
         public String signUP(User.Entity.User loginUser)
         {
+            if (loginUser.name==null || loginUser.passWord==null || loginUser.email==null)
+            {
+                return "注册失败";
+            }
             bool[] isVaild = myUserDBService.register(loginUser.name, loginUser.passWord, loginUser.email);
             if (isVaild[0] == false)
             {
